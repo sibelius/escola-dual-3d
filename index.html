@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dual City — Escola Dual 3D</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body>
+  <div id="game"></div>
+
+  <!-- HUD -->
+  <div id="hud" class="hidden">
+    <div id="clock-box">
+      <div id="clock">07:40</div>
+      <div id="day">Segunda-feira · Florianópolis</div>
+    </div>
+    <div id="stats">
+      <div class="stat"><span>⭐ Popularidade</span><div class="bar"><i id="bar-pop"></i></div></div>
+      <div class="stat"><span>🍎 Fome</span><div class="bar"><i id="bar-fome"></i></div></div>
+      <div class="stat"><span>📝 Nota</span><b id="nota">—</b></div>
+      <div class="stat"><span>💰 Mesada</span><b id="money">R$ 10</b></div>
+    </div>
+    <div id="missions">
+      <h3 id="role-name">Missões</h3>
+      <ul id="mission-list"></ul>
+    </div>
+    <canvas id="minimap" width="220" height="220"></canvas>
+    <div id="prompt" class="hidden"></div>
+    <div id="toast"></div>
+    <div id="help">WASD mover · Shift correr · Espaço pular · E interagir · J contar piada · F patinete · M mudar personagem</div>
+  </div>
+  <div id="bubbles"></div>
+
+  <!-- Menu de personagens -->
+  <div id="menu">
+    <div class="menu-inner">
+      <div class="logo">DUAL <small>CITY</small></div>
+      <p class="sub">Um dia na Escola Dual · Itacorubi, Florianópolis — mapa baseado no OpenStreetMap</p>
+      <div id="roles"></div>
+      <p class="tip">Escolha quem você vai ser hoje. O sinal toca às 08:00 — não se atrase!</p>
+    </div>
+  </div>
+
+  <!-- Overlay de mini-games / diálogos -->
+  <div id="overlay" class="hidden"><div id="overlay-box"></div></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
